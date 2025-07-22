@@ -1,0 +1,25 @@
+.about__text {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 93px;
+  background-color: #1E1823;
+}
+
+.about__text {
+  max-width: 308px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.about__title {
+  font-size: 18px;
+  color: #FFFFFF;
+  font-family: Montserrat;
+}/*# sourceMappingURL=style.css.map */

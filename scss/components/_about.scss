@@ -1,0 +1,19 @@
+@import "../utils/placeholder";
+@import "../utils/variables";
+.about{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 93px;
+    background-color: $bg-color;
+}
+.about__text{
+    max-width: 308px;
+    @extend %base-text;
+    color: rgba(255, 255, 255, 0.7);
+}
+.about__title{
+    font-size: 18px;
+    color: $ui-color;
+    font-family: Montserrat;
+}
