@@ -11,6 +11,26 @@
   justify-content: center;
   gap: 93px;
   background-color: #1E1823;
+  padding-top: 50px;
+  padding-bottom: 51px;
+  position: relative;
+}
+.about__item {
+  position: relative;
+  width: 326px;
+}
+.about__item::after {
+  content: "";
+  padding-top: 124px;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  left: 326px;
+  bottom: 70px;
+}
+
+.about__item-last::after {
+  display: none;
 }
 
 .about__text {
@@ -22,4 +42,22 @@
   font-size: 18px;
   color: #FFFFFF;
   font-family: Montserrat;
+}
+
+.about__svg-wrapper {
+  width: 62px;
+  height: 62px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 365px;
+  position: relative;
+}
+
+.about__svg {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+}
+
+.about__svg-coin {
+  left: 17px;
 }/*# sourceMappingURL=style.css.map */
