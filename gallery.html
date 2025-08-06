@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css" integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Cormorant+Upright:wght@300;400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italiana&family=Jura:wght@300..700&family=Kaushan+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Teko:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Zen+Dots&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <section>
+        <div class="container">
+
+            <h2 class="gallery__title"><span class="gallery__title-prefix">Top </span>Sellers</h2>
+
+            <ul class="gallery__list">
+                <li class="gallery__list-item"><img class="gallery__img" srcset="/img/coffee-choc.png 1x, /img/coffee-choc@2x.png 2x" alt=""></li>
+                <li class="gallery__list-item"><img class="gallery__img" srcset="/img/nuts-choc.png 1x, /img/nuts-choc@2x.png 2x" alt=""></li>
+                <li class="gallery__list-item"><img class="gallery__img" srcset="/img/truffle-choc.png 1x, /img/truffle-choc@2x.png 2x" alt=""></li>
+            </ul>
+
+            <div class="gallery__info">
+                <p class="gallery__text">Crazy enough chocolate originates from a bean just like the coffee bean called Cacao. Cacao has been around for thousands of years and was first discovered by the Native American tribe called the Mayans.</p>
+                <img class="gallery__single-img" srcset="/img/nuts-choc.png 1x, /img/nuts-choc@2x.png 2x" alt="">
+                <button class="gallery__btn" data-modal-open>Buy now</button>
+            </div>
+
+        </div>
+
+        <div class="back-drop is-hidden" data-modal>
+
+            <div class="modal">
+                <div>
+                    <div class="modal__close-wrapper">
+                        <button class="btn-close" data-modal-close> 
+
+                            <svg width="28px" height="28px"> 
+                                <use href="./symbols.svg#close"></use>
+                            </svg>
+
+                        </button>
+                    </div>
+
+                    <div class="modal__content">
+                        <h3 class="modal__title"><span class="modal__title-prefix">BUY </span>NOW</h3>
+
+                        <ul class="modal__list"> 
+                            <li class="modal__list-item">
+                                <img class="modal__list-img" srcset="/img/dark-choc.png 1x, /img/dark-choc@2x.png 2x" alt="">
+                                <button class="modal__list-btn">100 g</button>
+                            </li>
+
+                            <li class="modal__list-item">
+                                <img class="modal__list-img" srcset="/img/white-choc.png 1x, /img/white-choc@2x.png 2x" alt="">
+                                <button class="modal__list-btn">200 g</button>
+                            </li>
+                            
+                            <li class="modal__list-item">
+                                <img class="modal__list-img" srcset="/img/milk-choc.png 1x, /img/milk-choc@2x.png 2x" alt="">
+                                <button class="modal__list-btn">300 g</button>
+                            </li>
+                        </ul>
+
+                        <svg class="modal__slider" width="81px" height="13px"> 
+                            <use href="./symbols.svg#slider"></use>
+                        </svg>
+
+                        <form class="modal__form" action="#" method="post">
+
+                            <div class="modal__form-fields">
+
+                                <label class="modal__label" for="name">
+                                    
+                                    Personal information
+
+                                    <div class="modal__name">
+                                        <input class="modal__input" aria-required="true" placeholder="Name" type="text" id="name" name="name" required>
+                                        
+                                        <input class="modal__input" aria-required="true" placeholder="Surname" type="text" id="surname" name="Surname" required>
+                                    </div>
+
+
+                                </label>
+
+                                <label class="modal__label" for="email">Email
+
+                                    <input class="modal__input" type="email" placeholder="Enter your email" class="input" />
+                                
+                                </label>
+                                            
+                                <label class="modal__label" for="phone">Phone number
+
+                                    <div class="phone__code">
+
+                                        <svg width="32px" height="24px"> 
+                                            <use href="./symbols.svg#flag"></use>
+                                        </svg>
+                                        
+
+                                        <p class="phone__code-text">+380</p>
+                                    </div>
+            
+                                    <input class="modal__input modal__input-phone" aria-required="true" placeholder="Phone number" type="tel" id="phone" name="phone" required>
+                                    
+                                </label>
+
+                                <label class="modal__label">Card number
+
+                                    <div>
+                                        
+                                        <input class="modal__input" aria-required="true" placeholder="Enter number" type="" id="card-number" name="phone" required>
+
+                                        <svg class="form__svg" width="32px" height="20px"> 
+                                            <use href="./symbols.svg#mastercard"></use>
+                                        </svg>
+
+                                    </div>
+                                    
+                                </label>
+
+
+
+                                <label class="modal__label" for="comment">Comment
+                                    <textarea class="modal__input modal__textarea" placeholder="Enter text" id="comment" name="comment" rows="4" required></textarea>
+                                </label>
+
+                            </div>
+
+
+                        </form>
+
+                        <button class="modal__btn">Submit</button>
+
+
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <script src="/modal.js"></script>
+</body>
+</html>
