@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css" integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Cormorant+Upright:wght@300;400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italiana&family=Jura:wght@300..700&family=Kaushan+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Teko:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Zen+Dots&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <section class="info">
+        <div class="container-second info__content">
+            <h2 class="info__title">EXPLORE OUR NEW CHOCOLATE FIRST</h2>
+            <p class="info__text">From the velvety texture to the rich and complex flavor, our New Chocolate is a true indulgence that will leave you craving more. Made with only the finest ingredients and handcrafted with the utmost care, each piece is a work of art that is sure to please.</p>
+            <button class="info__btn" data-modal-open>Subscribe</button>
+        </div>
+
+        <div class="back-drop is-hidden" data-modal>
+
+            <div class="info__modal">
+
+                <div>
+
+                    <img class="info__modal-img" srcset="/img/chocolate__bg.png 1x, /img/chocolate__bg@2x.png 2x" alt="">
+                    
+                     <div class="modal__close-wrapper">
+                        <button class="btn-close" data-modal-close> 
+
+                            <svg width="28px" height="28px"> 
+                                <use href="./symbols.svg#close-inversed"></use>
+                            </svg>
+
+                        </button>
+                    </div>
+
+                    <div class="info-modal__content">
+
+                        <h3 class="info-modal__title">Explore our <br> <span class="info-modal__title-prefix"> new chocolate </span> first!</h3>
+
+                        <div class="info-modal__form">
+                            <form action="">
+
+                                <label class="info-modal__label" for="email">
+
+                                    <input class="info-modal__input" type="email" placeholder="Enter your email" class="input" />
+                                
+                                </label>
+
+                            </form>
+
+                            <button class="info-modal__btn">Submit</button>
+                        </div>
+
+                    </div>
+
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <script src="/modal.js"></script>
+</body>
+</html>
