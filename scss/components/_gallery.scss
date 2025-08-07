@@ -1,4 +1,5 @@
 @import "../utils/variables";
+@import "../utils/placeholder";
 
 .gallery
 {
@@ -78,21 +79,6 @@
         background-color: $decor-color;
     }
 }
-
-
-
-
-.container
-{
-    max-width: 1136px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 0 auto;
-
-}
-
-
-
 
 .btn-close
 {

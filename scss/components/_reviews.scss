@@ -1,0 +1,296 @@
+@import "../utils/variables";
+
+.reviews
+{
+    &__title
+    {
+        font-family: "Montserrat";
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: -3%;
+        text-align: center;
+        text-transform: uppercase;
+        color: $text-primary;
+        margin: 0px 0px 91px 0px;
+        padding-top: 128px;
+
+    }
+
+    &-phone__code
+    {
+        top: 610px;
+        left: 70px;   
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        justify-content: left;
+        width: 125px;
+        border-right: 3px solid #1111110D;
+        height: 32px;
+        position: absolute;
+        top: 345px;
+        left: 70px;
+
+        &-text
+        {
+            font-family: "Montserrat";
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 100%;
+            letter-spacing: -2%;
+            vertical-align: middle;
+            color: $text-primary;
+        }
+
+    }
+    
+    &__modal
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 517px;
+        height: 631px;
+        border-radius: 15px;
+
+        background-color: #FAFAFA;
+        box-shadow: 0px 2px 1px 0px #00000033;
+
+        box-shadow: 0px 1px 1px 0px #00000024;
+
+        box-shadow: 0px 1px 3px 0px #0000001F;
+        z-index: 1000;
+        transform: translate(-50%, -50%);
+        animation-name: modal-open;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: both;
+    }
+
+    &__title-prefix
+    {
+        color: $decor-color;
+    }
+
+    &__list
+    {
+        list-style-type: none;
+        display: flex;
+        gap: 28px;
+        padding: 0px;
+        margin-bottom: 32px;
+    }
+
+    &__list-item
+    {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 360px;
+        height: 200px;
+        border-radius: 15px;
+        background-color: $ui-color;
+        border: 1px solid #1111111A;
+        box-shadow: 0px 9.05px 26.57px 0px #D7E4F940;
+
+    }
+
+    &__control
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        padding-bottom: 128px;
+    }
+
+    &__btn
+    {
+        background-color: transparent;
+        border: 1px solid $decor-color;
+        padding: 14px 40px 14px 40px;
+        font-family: "Montserrat";
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: $text-primary;
+        border-radius: 100px;
+    }
+
+}
+
+
+
+.reviews-modal
+{
+
+    &__content
+    {
+        
+        max-width: 437px;
+        margin: 0 auto;
+        
+    }
+
+    &__textarea
+    {
+        resize: none;
+        padding-top: 22px;
+        height: 137px;
+        margin-bottom: 14px;
+    }
+
+    &__btn
+    {
+        background-color: $decor-color;
+        color: $ui-color;
+        font-family: "Montserrat";
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        border-radius: 20px;
+        border: none;
+        padding: 14px 40px 14px 40px;
+        margin-bottom: 100px;
+    }
+
+    &__title
+    {
+        font-family: "Montserrat";
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: -3%;
+        text-align: left;
+        text-transform: uppercase;
+        color: $text-primary;
+        margin-bottom: 40px;
+        margin-top: 40px;
+        width: 80%;
+    }
+}
+
+.client
+{
+    &__name
+    {
+        font-family: "Montserrat";
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0%;
+        text-align: center;
+        color: $text-primary;
+        margin: 56px 0px 24px 0px;
+    }
+
+    &__reviews
+    {
+        @extend %base-text;
+        line-height: 18px;
+        letter-spacing: -2%;
+        text-align: center;
+        color: $text-primary;
+        opacity: 0.7;
+        width: 300px;
+        margin: 0px;
+    }
+
+    &__photo
+    {
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        top: -40px;
+    }
+}
+
+
+
+@media (min-width: 704px) and (max-width: 1136px)
+{
+    .reviews__list-item:nth-child(3)
+    {
+        display: none;
+    }
+}
+
+@media (max-width: 704px)
+{
+    
+    .reviews
+    {
+        &__modal
+        {
+            width: 311px;
+            height: 471px;
+        }
+
+
+
+        &-phone__code
+        {
+            gap: 8px;
+            width: 85px;
+            height: 25px;
+            top: 262px;
+            left: 35px;
+            
+            &-text
+            {
+                font-size: 14px;
+            }
+        }
+
+        &__list-item:nth-child(3)
+        {
+            display: none;
+        }
+
+        &__list-item:nth-child(2)
+        {
+            display: none;
+        }
+    }
+
+
+
+    .reviews-modal
+    {
+        &__textarea
+        {
+            padding-top: 14px;
+            height: 91px;
+            margin-bottom: 6px;
+        }
+
+        &__btn
+        {
+            padding: 12px 28px 12px 28px;
+        }
+
+        &__content
+        {
+            max-width: 263px;
+        }
+
+        &__title
+        {
+            margin: 32px 0px 26px 0px;
+            font-size: 18px;
+            line-height: 22px;
+            width: 100%;
+        } 
+    }
+
+    
+
+
+}

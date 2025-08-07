@@ -1,3 +1,10 @@
+.client__reviews, .about__text, .gallery__text {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+}
+
 .gallery__title {
   font-family: "Montserrat";
   font-weight: 600;
@@ -54,13 +61,6 @@
   padding: 14px 40px;
   border-radius: 25px;
   background-color: #FD9222;
-}
-
-.container {
-  max-width: 1136px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
 }
 
 .btn-close {
@@ -415,7 +415,7 @@
     right: 42px;
   }
 }
-.about__text, .gallery__text {
+.client__reviews, .about__text, .gallery__text {
   font-family: "Montserrat";
   font-weight: 400;
   font-style: normal;
@@ -477,4 +477,231 @@
 
 .about__svg-coin {
   left: 17px;
+}
+
+.reviews__title {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -3%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #111111;
+  margin: 0px 0px 91px 0px;
+  padding-top: 128px;
+}
+.reviews-phone__code {
+  top: 610px;
+  left: 70px;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: left;
+  width: 125px;
+  border-right: 3px solid rgba(17, 17, 17, 0.0509803922);
+  height: 32px;
+  position: absolute;
+  top: 345px;
+  left: 70px;
+}
+.reviews-phone__code-text {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: -2%;
+  vertical-align: middle;
+  color: #111111;
+}
+.reviews__modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 517px;
+  height: 631px;
+  border-radius: 15px;
+  background-color: #FAFAFA;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1411764706);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1215686275);
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+  animation-name: modal-open;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+.reviews__title-prefix {
+  color: #FD9222;
+}
+.reviews__list {
+  list-style-type: none;
+  display: flex;
+  gap: 28px;
+  padding: 0px;
+  margin-bottom: 32px;
+}
+.reviews__list-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 360px;
+  height: 200px;
+  border-radius: 15px;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(17, 17, 17, 0.1019607843);
+  box-shadow: 0px 9.05px 26.57px 0px rgba(215, 228, 249, 0.2509803922);
+}
+.reviews__control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding-bottom: 128px;
+}
+.reviews__btn {
+  background-color: transparent;
+  border: 1px solid #FD9222;
+  padding: 14px 40px 14px 40px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #111111;
+  border-radius: 100px;
+}
+
+.reviews-modal__content {
+  max-width: 437px;
+  margin: 0 auto;
+}
+.reviews-modal__textarea {
+  resize: none;
+  padding-top: 22px;
+  height: 137px;
+  margin-bottom: 14px;
+}
+.reviews-modal__btn {
+  background-color: #FD9222;
+  color: #FFFFFF;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  border-radius: 20px;
+  border: none;
+  padding: 14px 40px 14px 40px;
+  margin-bottom: 100px;
+}
+.reviews-modal__title {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -3%;
+  text-align: left;
+  text-transform: uppercase;
+  color: #111111;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  width: 80%;
+}
+
+.client__name {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #111111;
+  margin: 56px 0px 24px 0px;
+}
+.client__reviews {
+  line-height: 18px;
+  letter-spacing: -2%;
+  text-align: center;
+  color: #111111;
+  opacity: 0.7;
+  width: 300px;
+  margin: 0px;
+}
+.client__photo {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: -40px;
+}
+
+@media (min-width: 704px) and (max-width: 1136px) {
+  .reviews__list-item:nth-child(3) {
+    display: none;
+  }
+}
+@media (max-width: 704px) {
+  .reviews__modal {
+    width: 311px;
+    height: 471px;
+  }
+  .reviews-phone__code {
+    gap: 8px;
+    width: 85px;
+    height: 25px;
+    top: 262px;
+    left: 35px;
+  }
+  .reviews-phone__code-text {
+    font-size: 14px;
+  }
+  .reviews__list-item:nth-child(3) {
+    display: none;
+  }
+  .reviews__list-item:nth-child(2) {
+    display: none;
+  }
+  .reviews-modal__textarea {
+    padding-top: 14px;
+    height: 91px;
+    margin-bottom: 6px;
+  }
+  .reviews-modal__btn {
+    padding: 12px 28px 12px 28px;
+  }
+  .reviews-modal__content {
+    max-width: 263px;
+  }
+  .reviews-modal__title {
+    margin: 32px 0px 26px 0px;
+    font-size: 18px;
+    line-height: 22px;
+    width: 100%;
+  }
+}
+.container {
+  max-width: 1136px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #FAFAFA;
+}
+
+@media (min-width: 704px) and (max-width: 1136px) {
+  .container {
+    max-width: 704px;
+  }
+}
+@media (max-width: 704px) {
+  .container {
+    max-width: 365px;
+  }
 }/*# sourceMappingURL=style.css.map */

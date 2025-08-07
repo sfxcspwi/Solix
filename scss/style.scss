@@ -9,3 +9,32 @@
 @import "./components/product";
 @import "./components/reviews";
 
+.container
+{
+    max-width: 1136px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+body
+{
+    background-color: #FAFAFA;
+}
+
+@media (min-width: 704px) and (max-width: 1136px)
+{
+    .container
+    {
+        max-width: 704px;
+    }
+}
+
+
+@media (max-width: 704px)
+{
+    .container
+    {
+        max-width: 365px;
+    }
+}
