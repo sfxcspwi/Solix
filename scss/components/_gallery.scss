@@ -80,6 +80,14 @@
     }
 }
 
+.container-second
+{
+    max-width: 1136px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
 .btn-close
 {
     background-color: transparent;
@@ -341,7 +349,7 @@
 
 @media (min-width: 704px) and (max-width: 1136px)
 {
-    .container
+    .container-second
     {
         max-width: 704px;
     }
@@ -372,7 +380,7 @@
 
 @media (max-width: 704px)
 {
-    .container
+    .container-second
     {
         max-width: 365px;
     }
@@ -569,3 +577,4 @@
 
 
 }
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="header container">
+        <div class="header__logo-wrapper">
+            <span class="header__logo">SIMPLY CHOCOLATE</span>
+            <svg class="header__chocolate-svg" width="24" height="24"><use href="/symbols.svg#chocolate"></use></svg>
+        </div>
+        <nav class="header__nav">
+            <ul class="header__list">
+                <li class="header__item"><a href="#" class="header__link">Home</a></li>
+                <li class="header__item"><a href="#" class="header__link">How it’s made?</a></li>
+                <li class="header__item"><a href="#" class="header__link">Our products</a></li>
+                <li class="header__item"><a href="#" class="header__link">Top sellers</a></li>
+                <li class="header__item"><a href="#" class="header__link">Chocolate is loved</a></li>
+            </ul>
+        </nav>
+        <div class="header__svg-wrapper">
+            <svg class="header__instagram-svg header__svg" width="24" height="24"><use href="/symbols.svg#instagram"></use></svg>
+            <svg class="header__twitter-svg header__svg" width="24" height="24"><use href="/symbols.svg#twitter"></use></svg>
+        </div>
+
+        <button class="hamburger-btn" id="hamburgerBtn" onclick="openMenu()">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+        </button>
+    </section>
+    <div  class="menu-overlay" id="menuOverlay">
+    <button class="close-btn" onclick="closeMenu()">✕</button>
+    <nav class="header__nav">
+        <ul class="header__list">
+            <li class="header__item"><a href="#" class="header__link">Home</a></li>
+            <li class="header__item"><a href="#" class="header__link">How it’s made?</a></li>
+            <li class="header__item"><a href="#" class="header__link">Our products</a></li>
+            <li class="header__item"><a href="#" class="header__link">Top sellers</a></li>
+            <li class="header__item"><a href="#" class="header__link">Chocolate is loved</a></li>
+        </ul>
+    </nav>
+    <div class="header__svg-wrapper">
+        <svg class="header__instagram-svg header__svg" width="24" height="24"><use href="/symbols.svg#instagram"></use></svg>
+        <svg class="header__twitter-svg header__svg" width="24" height="24"><use href="/symbols.svg#twitter"></use></svg>
+    </div>
+</div>
+</body>
+</html>

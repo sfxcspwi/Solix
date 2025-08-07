@@ -9,32 +9,17 @@
 @import "./components/product";
 @import "./components/reviews";
 
-.container
-{
-    max-width: 1136px;
-    padding-left: 15px;
-    padding-right: 15px;
+.container{
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 15px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
-
-body
-{
-    background-color: #FAFAFA;
+html, body{
+    overflow-x: hidden;
+    max-width: none;
 }
-
-@media (min-width: 704px) and (max-width: 1136px)
-{
-    .container
-    {
-        max-width: 704px;
-    }
-}
-
-
-@media (max-width: 704px)
-{
-    .container
-    {
-        max-width: 365px;
-    }
+a{
+    text-decoration: none;
 }

@@ -124,7 +124,13 @@
 
 }
 
-
+.container-second
+{
+    max-width: 1136px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
 
 .reviews-modal
 {
@@ -220,10 +226,20 @@
     {
         display: none;
     }
+
+    .container-second
+    {
+        max-width: 704px;
+    }
 }
 
 @media (max-width: 704px)
 {
+
+    .container-second
+    {
+        max-width: 365px;
+    }
     
     .reviews
     {
