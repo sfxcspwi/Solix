@@ -1,0 +1,95 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+}
+
+
+
+.header__list{
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+.header__logo-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.header__logo{
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 18px;
+}
+.header__link{
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 14px;
+    color: black;
+}
+.header__link:hover{
+    color: #FD9222;
+}
+.header__svg-wrapper{
+    display: flex;
+    gap: 19px;
+}
+.header__svg:hover{
+    fill: #FD9222;
+}
+.hamburger-btn{
+    display: none;
+}
+@media (max-width:1024px){
+    .header__list{
+        display: none;
+    }
+    .header__svg-wrapper{
+        display: none;
+    }
+    .hamburger-btn{
+        display: block;
+    }  
+
+    .menu-overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in-out;
+    z-index: 100;
+    height: 796px; 
+}
+
+    .menu-overlay.active {
+        transform: translateX(0);
+
+    }
+    .hamburger-line {
+            width: 20px;
+            height: 2px;
+            background: white;
+            border-radius: 1px;
+            transition: all 0.3s ease;
+            background-color: black;
+    }
+    .hamburger-btn{
+        position: relative;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+    }
+}

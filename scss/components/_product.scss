@@ -1,0 +1,99 @@
+.products__title{
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    font-family: Montserrat;
+    font-size: 24px;
+}
+.products__span{
+    color: #FD9222;
+}
+.products__card-list{
+    display: flex;
+    justify-content: center;
+    font-family: Montserrat;
+    text-align: center;
+    text-transform: uppercase;
+    gap: 18px;
+}
+.products__name{
+    margin-top: 13px;
+    margin-bottom: 0;
+}
+.products__card{
+    width: 270px;
+    height: 364px;
+    border-radius: 15px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgba(17, 17, 17, 0.1);
+    background-color: white;
+}
+.products__subtitle{
+    text-transform: none;
+    color: rgba(17, 17, 17, 0.7);
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 12px;
+}
+.products__btn{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 100px;
+    border: 1px solid rgba(17, 17, 17, 0.1);
+    background-color: white;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 14px;
+}
+.products__decorative-list{
+    display: flex;
+    justify-content: center;
+    gap: 13px;
+    margin-top: 32px;
+}
+.products__decorate-item-line{
+    width: 28px;
+    height: 13px;
+    background-color: #FD9222;
+    border: none;
+    border-radius: 20px;
+}
+.products__decorate-item{
+    width: 13px;
+    height: 13px;
+    border: none;
+    border-radius: 100px;
+    background-color: rgba(17, 17, 17, 0.1);
+}
+@media (max-width:1024px){
+    .products__card-pineapple{
+        display: none;
+    }
+}
+@media (max-width:768px){
+    .products__card-lime-sea{
+        display: none;
+    }
+    .products__card{
+        width: 90.3%;  
+    }
+    .products__img{
+        width: 75%;
+    }
+    .products__name{
+        font-size: 16px;
+    }
+}
+@media (max-width:480px){
+    .products__card-apple-cranberry{
+        display: none;
+    }
+    .products__name{
+        font-size: 18px;
+    }
+}

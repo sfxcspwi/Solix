@@ -51,3 +51,23 @@
 .about__svg-coin{
     left: 17px;
 }
+@media (max-width:1024px){
+    .about__item::after{
+        content: "";
+        display: none;
+    }
+    .about{
+        gap: 70px;
+    }
+}
+@media (max-width:768px){
+    .about{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+}
+@media (max-width:480px){
+    .about{
+        grid-template-columns: auto;
+    }
+}
