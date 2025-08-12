@@ -9,17 +9,7 @@
 @import "./components/product";
 @import "./components/reviews";
 
-.container{
-    width: 100%;
-    max-width: 1200px;
-    padding: 0 15px;
-    margin: 0 auto;
-    box-sizing: border-box;
-}
-html, body{
-    overflow-x: hidden;
-    max-width: none;
-}
+
 a{
     text-decoration: none;
 }

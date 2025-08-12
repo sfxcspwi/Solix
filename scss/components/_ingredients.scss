@@ -1,3 +1,5 @@
+ @import "../utils/placeholder";
+ @import "../utils/variables";
  .ingradients__title{
     text-align: center;
     margin: 0 auto;
@@ -9,9 +11,7 @@
 }
 .ingradients__text{
     padding-top: 37px;
-    font-family: Montserrat;
-    font-size: 14px;
-    font-weight: 400;
+    @extend %base-text;
     text-align: center;
     margin: 0 auto;
     max-width: 486px;
@@ -23,7 +23,7 @@
     gap: 19px;
 }
 .ingradients__title-span{
-    color: #FD9222;
+    color: $decor-color;
 }
 .ingradients__card{
     max-width: 268px;
@@ -34,11 +34,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-}
-.ingradients__card:hover .ingradients__overlay{
-    transform: translateY(-254.5px);
-
+    &:hover .ingradients__overlay{
+        transform: translateY(-254.5px);
+    }
 }
 .ingradients__overlay{
     transform: translateY(50px);
@@ -47,7 +45,7 @@
     overflow-y: scroll;
     min-width: 270px;
     min-height: 270px;
-    background-color: white;
+    background-color: $ui-color;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -70,7 +68,7 @@
     margin-bottom: 0;
 }
 .ingradients__wrapper-chocolate{
-    background-color: #FD9222;
+    background-color: $decor-color;
 }
 
 
@@ -91,9 +89,9 @@
     height: 24px;
     border-radius: 35px;
     border: none;
-    background-color: #FD9222;
+    background-color: $decor-color;
     font-family: Montserrat;
-    color: white;
+    color: $ui-color;
     font-weight: 400;
     padding: 0;
     font-size: 10px;
@@ -103,10 +101,10 @@
     width: 93px;
     height: 24px;
     border-radius: 35px;
-    border: 1px solid #FD9222;
+    border: 1px solid $decor-color;
     background-color: transparent;
     font-family: Montserrat;
-    color: black;
+    color: $text-primary;
     font-weight: 400;
     padding: 0;
     font-size: 10px;
@@ -116,23 +114,21 @@
     height: 24px;
 }
 .ingradients__card-text{
-    font-family: Montserrat;
-    font-weight: 400;
-    font-size: 14px;
-    color: black;
+    @extend %base-text;
+    color: $text-primary;
     max-width: 214px;
 }
 .ingradients__card-milk, .ingradients__card-sweet-chocolate{
-    border: 1px solid #FD9222;
+    border: 1px solid $decor-color;
 }
 .ingradients__card-chocolate{
-    background-color: #FD9222;
+    background-color: $decor-color;
 }
 .ingradients__card-nuts{
-    background-color: #1E1823;
+    background-color: $bg-color;
 }
 .ingradients__card-name-nuts, .ingradients__card-name-chocolate{
-    color: white;
+    color: $ui-color;
 }
 @media (max-width:1024px){
 .ingradients__list{
@@ -203,4 +199,15 @@
     .ingradients__button-list{
         flex-direction: row;
     }
+}
+.container{
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+html, body{
+    overflow-x: hidden;
+    max-width: none;
 }
