@@ -1,5 +1,4 @@
-@import "../utils/placeholder";
-@import "../utils/variables";
+@use "../utils/variables" as *;
 .about{
     display: flex;
     justify-content: center;
@@ -31,7 +30,10 @@
 }
 .about__text{
     max-width: 308px;
-    @extend %base-text;
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px; 
     color: rgba(255, 255, 255, 0.7);
 }
 .about__title{

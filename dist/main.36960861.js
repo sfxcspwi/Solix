@@ -160,7 +160,7 @@
       });
     }
   }
-})({"cNieG":[function(require,module,exports,__globalThis) {
+})({"io2N8":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -766,6 +766,6 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}]},["cNieG","bNJxx"], "bNJxx", "parcelRequire24a9", {})
+},{}]},["io2N8","bNJxx"], "bNJxx", "parcelRequire24a9", {})
 
 //# sourceMappingURL=main.36960861.js.map

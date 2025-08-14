@@ -1,5 +1,5 @@
- @import "../utils/placeholder";
- @import "../utils/variables";
+
+ @use "../utils/variables" as *;
 
 .how-its-made__title{
     text-transform: uppercase;
@@ -31,7 +31,10 @@
     padding-left: 32px;
 }
 .how-its-made__text{
-    @extend %base-text;
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px; 
     max-width: 436px;
 }
 .how-its-made__steps{

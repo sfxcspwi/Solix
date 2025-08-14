@@ -1,5 +1,5 @@
- @import "../utils/placeholder";
- @import "../utils/variables";
+
+ @use "../utils/variables" as *;
  .ingradients__title{
     text-align: center;
     margin: 0 auto;
@@ -11,7 +11,10 @@
 }
 .ingradients__text{
     padding-top: 37px;
-    @extend %base-text;
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px; 
     text-align: center;
     margin: 0 auto;
     max-width: 486px;
@@ -114,7 +117,10 @@
     height: 24px;
 }
 .ingradients__card-text{
-    @extend %base-text;
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px; 
     color: $text-primary;
     max-width: 214px;
 }

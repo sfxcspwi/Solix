@@ -1,5 +1,6 @@
-@import "../utils/placeholder";
-@import "../utils/variables";
+
+@use "../utils/variables" as *;
+
 .products__title{
     text-transform: uppercase;
     text-align: center;
