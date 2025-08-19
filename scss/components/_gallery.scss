@@ -3,6 +3,7 @@
 
 .gallery
 {
+    position: static;
 
     &__title
     {
@@ -19,7 +20,7 @@
         padding-top: 64px;
     }
 
-    &__first-img
+    &__single-img
     {
         display: none;
     }
@@ -419,7 +420,7 @@
 
         &__info
         {
-            height: 90px;
+            height: 600px;
             flex-wrap: wrap;
             gap: 25px;
    
@@ -436,7 +437,7 @@
             margin-bottom: 32px;
         }
 
-        &__first-img
+        &__single-img
         {
             width: 335px;
             height: 464px;

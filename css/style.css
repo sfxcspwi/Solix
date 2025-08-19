@@ -118,6 +118,9 @@
     gap: 18px;
   }
 }
+.gallery {
+  position: static;
+}
 .gallery__title {
   font-family: "Montserrat";
   font-weight: 600;
@@ -436,7 +439,7 @@
     width: 306px;
   }
   .gallery__info {
-    height: 90px;
+    height: 600px;
     flex-wrap: wrap;
     gap: 25px;
   }
@@ -1564,6 +1567,9 @@ html, body {
   max-width: none;
 }
 
+.reviews {
+  position: static;
+}
 .reviews__title {
   font-family: "Montserrat";
   font-weight: 600;

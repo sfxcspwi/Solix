@@ -129,6 +129,10 @@
   }
 }
 
+.gallery {
+  position: static;
+}
+
 .gallery__title {
   font-family: Montserrat;
   font-weight: 600;
@@ -463,7 +467,7 @@
   .gallery__info {
     flex-wrap: wrap;
     gap: 25px;
-    height: 90px;
+    height: 600px;
   }
 
   .gallery__btn {
@@ -1594,6 +1598,10 @@
 html, body {
   max-width: none;
   overflow-x: hidden;
+}
+
+.reviews {
+  position: static;
 }
 
 .reviews__title {
