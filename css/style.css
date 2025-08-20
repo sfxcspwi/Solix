@@ -1,10 +1,3 @@
-.client__reviews, .about__text, .ingradients__card-text, .ingradients__text, .info__text, .how-its-made__text, .gallery__text, .footer__contact-link {
-  font-family: "Montserrat";
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-}
-
 .footer {
   background-color: #1E1823;
 }
@@ -33,6 +26,10 @@
   margin: 0px 0px 14px 0px;
 }
 .footer__contact-link {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
   line-height: 18px;
   letter-spacing: -2%;
   color: #FFFFFF;
@@ -121,13 +118,9 @@
     gap: 18px;
   }
 }
-.client__reviews, .about__text, .ingradients__card-text, .ingradients__text, .info__text, .how-its-made__text, .gallery__text, .footer__contact-link {
-  font-family: "Montserrat";
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
+.gallery {
+  position: static;
 }
-
 .gallery__title {
   font-family: "Montserrat";
   font-weight: 600;
@@ -148,6 +141,10 @@
   color: #FD9222;
 }
 .gallery__text {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
   color: #111111;
   line-height: 18px;
   letter-spacing: -2%;
@@ -442,7 +439,7 @@
     width: 306px;
   }
   .gallery__info {
-    height: 90px;
+    height: 600px;
     flex-wrap: wrap;
     gap: 25px;
   }
@@ -546,13 +543,6 @@
     right: 42px;
   }
 }
-.client__reviews, .about__text, .ingradients__card-text, .ingradients__text, .info__text, .how-its-made__text, .footer__contact-link, .gallery__text {
-  font-family: "Montserrat";
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-}
-
 .header {
   display: flex;
   align-items: center;
@@ -592,56 +582,143 @@
   fill: #FD9222;
 }
 
-.hamburger-btn {
+.burger {
+  display: none;
+}
+
+.open {
+  display: flex !important;
+}
+
+.nav {
   display: none;
 }
 
 @media (max-width: 1024px) {
+  .header {
+    height: 47px;
+  }
   .header__list {
     display: none;
   }
   .header__svg-wrapper {
     display: none;
   }
-  .hamburger-btn {
-    display: block;
+  .burger {
+    display: flex;
+    position: relative;
+    z-index: 50;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30px;
+    height: 18px;
   }
-  .menu-overlay {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #FFFFFF;
-    transform: translateX(-100%);
-    transition: transform 0.4s ease-in-out;
-    z-index: 100;
-    height: 796px;
-  }
-  .menu-overlay.active {
-    transform: translateX(0);
-  }
-  .hamburger-line {
-    width: 20px;
+  .burger__span {
     height: 2px;
-    background: #FFFFFF;
-    border-radius: 1px;
-    transition: all 0.3s ease;
+    width: 100%;
+    transform: scale(1);
     background-color: #111111;
   }
-  .hamburger-btn {
-    position: relative;
-    width: 40px;
-    height: 40px;
+  .burger__span:hover {
+    background-color: #FD9222;
+  }
+  .burger::before {
+    content: "";
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    background-color: #111111;
+    transition: all 0.3s ease 0s;
+    top: 0;
+  }
+  .burger::before:hover {
+    background-color: #FD9222;
+  }
+  .burger::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    background-color: #111111;
+    transition: all 0.3s ease 0s;
+    bottom: 0;
+  }
+  .burger::after:focus {
+    background-color: #FD9222;
+  }
+  .burger.active .burger__span {
+    transform: scale(0);
+  }
+  .burger.active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+  }
+  .burger.active::after {
+    top: 50%;
+    transform: rotate(45deg) translate(0, -50%);
+  }
+  .nav {
+    background-color: #1E1823;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    position: fixed;
+    z-index: 50;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    transform: translateX(100%);
+  }
+  .nav.active {
+    transition: all 1s;
+    transform: translateX(0);
+  }
+  .nav__wrapper {
+    display: flex;
     justify-content: center;
-    gap: 4px;
-    background-color: transparent;
-    border: none;
+    margin-top: 110px;
+  }
+  .nav__svg {
+    fill: #FFFFFF;
+  }
+  .nav__svg:hover {
+    fill: #FD9222;
+  }
+  .nav__svg-wrapper {
+    display: flex;
+    position: absolute;
+    top: 95%;
+    left: 5%;
+    gap: 10px;
+  }
+  .nav__list {
+    display: flex;
+    flex-direction: column;
     padding: 0;
+    gap: 35px;
+  }
+  .nav__link {
+    color: #FFFFFF;
+    font-family: Montserrat;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    position: relative;
+    list-style: none;
+  }
+  .nav__link:hover {
+    color: #FD9222;
+  }
+  .nav__link:hover::after {
+    content: "";
+    width: 50%;
+    height: 1px;
+    position: absolute;
+    top: 20px;
+    right: 50%;
+    border: none;
+    background-color: #FD9222;
   }
 }
 .container {
@@ -655,17 +732,6 @@
 html, body {
   overflow-x: hidden;
   max-width: none;
-}
-
-.menu-overlay {
-  display: none;
-}
-
-.client__reviews, .about__text, .ingradients__card-text, .ingradients__text, .info__text, .how-its-made__text, .footer__contact-link, .gallery__text {
-  font-family: "Montserrat";
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
 }
 
 .hero {
@@ -744,6 +810,7 @@ html, body {
   display: flex;
   align-items: center;
   gap: 15px;
+  list-style: none;
 }
 .hero__decorative-line {
   height: 119px;
@@ -823,13 +890,6 @@ html, body {
   max-width: none;
 }
 
-.client__reviews, .about__text, .ingradients__card-text, .ingradients__text, .info__text, .how-its-made__text, .footer__contact-link, .gallery__text {
-  font-family: "Montserrat";
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-}
-
 .how-its-made__title {
   text-transform: uppercase;
   text-align: center;
@@ -867,6 +927,10 @@ html, body {
 }
 
 .how-its-made__text {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
   max-width: 436px;
 }
 
@@ -946,13 +1010,6 @@ html, body {
   max-width: none;
 }
 
-.client__reviews, .about__text, .ingradients__card-text, .ingradients__text, .info__text, .footer__contact-link, .gallery__text, .how-its-made__text {
-  font-family: "Montserrat";
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-}
-
 .info {
   background-image: url(/img/information__bg.png);
   background-position: center;
@@ -976,6 +1033,10 @@ html, body {
   width: 378px;
 }
 .info__text {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
   line-height: 18px;
   letter-spacing: -2%;
   text-align: center;
@@ -1149,13 +1210,6 @@ html, body {
     height: 45px;
   }
 }
-.client__reviews, .about__text, .ingradients__card-text, .ingradients__text, .footer__contact-link, .gallery__text, .how-its-made__text, .info__text {
-  font-family: "Montserrat";
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-}
-
 .ingradients__title {
   text-align: center;
   margin: 0 auto;
@@ -1168,6 +1222,10 @@ html, body {
 
 .ingradients__text {
   padding-top: 37px;
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
   text-align: center;
   margin: 0 auto;
   max-width: 486px;
@@ -1195,7 +1253,11 @@ html, body {
   align-items: center;
 }
 .ingradients__card:hover .ingradients__overlay {
-  transform: translateY(-254.5px);
+  transform: translateY(-224.5px);
+}
+
+.ingradients__item {
+  list-style: none;
 }
 
 .ingradients__overlay {
@@ -1279,6 +1341,10 @@ html, body {
 }
 
 .ingradients__card-text {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
   color: #111111;
   max-width: 214px;
 }
@@ -1297,6 +1363,17 @@ html, body {
 
 .ingradients__card-name-nuts, .ingradients__card-name-chocolate {
   color: #FFFFFF;
+}
+
+.ingradients__button-list {
+  max-width: 280px;
+  justify-content: center;
+  margin-right: auto;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding-left: 0;
+  padding-right: 40px;
+  margin-right: 0;
 }
 
 @media (max-width: 1024px) {
@@ -1329,10 +1406,11 @@ html, body {
     max-width: 280px;
     justify-content: center;
     margin-right: auto;
-  }
-  .ingradients__button-list-sweet-chocolate {
-    padding-left: 20px;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: auto;
   }
 }
 @media (max-width: 768px) {
@@ -1347,8 +1425,8 @@ html, body {
     max-width: 280px;
   }
   .ingradients__button-list {
-    flex-direction: row;
     flex-wrap: wrap;
+    padding-left: 12px;
   }
 }
 @media (max-width: 550px) {
@@ -1367,6 +1445,12 @@ html, body {
   }
   .ingradients__button-list {
     flex-direction: row;
+    flex-wrap: nowrap;
+    padding-left: 0;
+  }
+  .ingradients__button-list-last {
+    display: flex;
+    justify-content: center;
   }
 }
 .container {
@@ -1380,13 +1464,6 @@ html, body {
 html, body {
   overflow-x: hidden;
   max-width: none;
-}
-
-.client__reviews, .about__text, .footer__contact-link, .gallery__text, .how-its-made__text, .info__text, .ingradients__text, .ingradients__card-text {
-  font-family: "Montserrat";
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
 }
 
 .about {
@@ -1423,6 +1500,10 @@ html, body {
 
 .about__text {
   max-width: 308px;
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -1470,13 +1551,6 @@ html, body {
     grid-template-columns: auto;
   }
 }
-.client__reviews, .footer__contact-link, .gallery__text, .how-its-made__text, .info__text, .ingradients__text, .ingradients__card-text, .about__text {
-  font-family: "Montserrat";
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-}
-
 .products__title {
   text-transform: uppercase;
   text-align: center;
@@ -1489,7 +1563,7 @@ html, body {
   color: #FD9222;
 }
 
-.products__card-list {
+.products__cards {
   display: flex;
   justify-content: center;
   font-family: Montserrat;
@@ -1599,6 +1673,9 @@ html, body {
   max-width: none;
 }
 
+.reviews {
+  position: static;
+}
 .reviews__title {
   font-family: "Montserrat";
   font-weight: 600;
@@ -1752,6 +1829,10 @@ html, body {
   margin: 56px 0px 24px 0px;
 }
 .client__reviews {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
   line-height: 18px;
   letter-spacing: -2%;
   text-align: center;
@@ -1819,4 +1900,8 @@ html, body {
 }
 a {
   text-decoration: none;
+}
+
+body {
+  background-color: #FAFAFA;
 }/*# sourceMappingURL=style.css.map */

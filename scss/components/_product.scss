@@ -1,5 +1,6 @@
-@import "../utils/placeholder";
-@import "../utils/variables";
+
+@use "../utils/variables" as *;
+
 .products__title{
     text-transform: uppercase;
     text-align: center;
@@ -10,7 +11,7 @@
 .products__span{
     color: $decor-color;
 }
-.products__card-list{
+.products__cards{
     display: flex;
     justify-content: center;
     font-family: Montserrat;

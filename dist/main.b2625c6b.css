@@ -32,6 +32,10 @@
 .footer__contact-link {
   letter-spacing: -2%;
   color: #fff;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
   line-height: 18px;
 }
 
@@ -125,11 +129,8 @@
   }
 }
 
-.client__reviews, .about__text, .ingradients__card-text, .ingradients__text, .info__text, .how-its-made__text, .gallery__text, .footer__contact-link {
-  font-family: Montserrat;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
+.gallery {
+  position: static;
 }
 
 .gallery__title {
@@ -159,6 +160,10 @@
   letter-spacing: -2%;
   width: 407px;
   margin: 0;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
   line-height: 18px;
 }
 
@@ -462,7 +467,7 @@
   .gallery__info {
     flex-wrap: wrap;
     gap: 25px;
-    height: 90px;
+    height: 600px;
   }
 
   .gallery__btn {
@@ -626,59 +631,159 @@
   fill: #fd9222;
 }
 
-.hamburger-btn {
+.burger {
+  display: none;
+}
+
+.open {
+  display: flex !important;
+}
+
+.nav {
   display: none;
 }
 
 @media (width <= 1024px) {
+  .header {
+    height: 47px;
+  }
+
   .header__list, .header__svg-wrapper {
     display: none;
   }
 
-  .hamburger-btn {
-    display: block;
-  }
-
-  .menu-overlay {
-    z-index: 100;
-    background-color: #fff;
-    height: 796px;
-    transition: transform .4s ease-in-out;
-    display: block;
-    position: absolute;
-    inset: 0;
-    transform: translateX(-100%);
-  }
-
-  .menu-overlay.active {
-    transform: translateX(0);
-  }
-
-  .hamburger-line {
-    background: #111;
-    border-radius: 1px;
-    width: 20px;
-    height: 2px;
-    transition: all .3s;
-  }
-
-  .hamburger-btn {
-    background-color: #0000;
-    border: none;
-    flex-direction: column;
-    justify-content: center;
+  .burger {
+    z-index: 50;
+    justify-content: flex-end;
     align-items: center;
-    gap: 4px;
-    width: 40px;
-    height: 40px;
-    padding: 0;
+    width: 30px;
+    height: 18px;
     display: flex;
     position: relative;
   }
-}
 
-.menu-overlay {
-  display: none;
+  .burger__span {
+    background-color: #111;
+    width: 100%;
+    height: 2px;
+    transform: scale(1);
+  }
+
+  .burger__span:hover {
+    background-color: #fd9222;
+  }
+
+  .burger:before {
+    content: "";
+    background-color: #111;
+    width: 100%;
+    height: 2px;
+    transition: all .3s;
+    position: absolute;
+    top: 0;
+  }
+
+  .burger:before:hover {
+    background-color: #fd9222;
+  }
+
+  .burger:after {
+    content: "";
+    background-color: #111;
+    width: 100%;
+    height: 2px;
+    transition: all .3s;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .burger:after:focus {
+    background-color: #fd9222;
+  }
+
+  .burger.active .burger__span {
+    transform: scale(0);
+  }
+
+  .burger.active:before {
+    top: 50%;
+    transform: rotate(-45deg)translate(0, -50%);
+  }
+
+  .burger.active:after {
+    top: 50%;
+    transform: rotate(45deg)translate(0, -50%);
+  }
+
+  .nav {
+    z-index: 50;
+    background-color: #1e1823;
+    flex-direction: column;
+    display: flex;
+    position: fixed;
+    inset: 0 0 0 50%;
+    overflow-y: auto;
+    transform: translateX(100%);
+  }
+
+  .nav.active {
+    transition: all 1s;
+    transform: translateX(0);
+  }
+
+  .nav__wrapper {
+    justify-content: center;
+    margin-top: 110px;
+    display: flex;
+  }
+
+  .nav__svg {
+    fill: #fff;
+  }
+
+  .nav__svg:hover {
+    fill: #fd9222;
+  }
+
+  .nav__svg-wrapper {
+    gap: 10px;
+    display: flex;
+    position: absolute;
+    top: 95%;
+    left: 5%;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: 35px;
+    padding: 0;
+    display: flex;
+  }
+
+  .nav__link {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    list-style: none;
+    position: relative;
+  }
+
+  .nav__link:hover {
+    color: #fd9222;
+  }
+
+  .nav__link:hover:after {
+    content: "";
+    background-color: #fd9222;
+    border: none;
+    width: 50%;
+    height: 1px;
+    position: absolute;
+    top: 20px;
+    right: 50%;
+  }
 }
 
 .hero {
@@ -759,6 +864,7 @@
 .hero__block {
   align-items: center;
   gap: 15px;
+  list-style: none;
   display: flex;
 }
 
@@ -829,13 +935,6 @@
   }
 }
 
-.client__reviews, .about__text, .ingradients__card-text, .ingradients__text, .info__text, .how-its-made__text, .footer__contact-link, .gallery__text {
-  font-family: Montserrat;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-}
-
 .how-its-made__title {
   text-transform: uppercase;
   text-align: center;
@@ -874,6 +973,10 @@
 
 .how-its-made__text {
   max-width: 436px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
 }
 
 .how-its-made__steps {
@@ -945,13 +1048,6 @@
   }
 }
 
-.client__reviews, .about__text, .ingradients__card-text, .ingradients__text, .info__text, .footer__contact-link, .gallery__text, .how-its-made__text {
-  font-family: Montserrat;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-}
-
 .info {
   background-image: url("information__bg.cba89265.png");
   background-position: center;
@@ -982,6 +1078,10 @@
   color: #fff;
   width: 467px;
   padding-bottom: 24px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
   line-height: 18px;
 }
 
@@ -1150,13 +1250,6 @@
   }
 }
 
-.client__reviews, .about__text, .ingradients__card-text, .ingradients__text, .footer__contact-link, .gallery__text, .how-its-made__text, .info__text {
-  font-family: Montserrat;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-}
-
 .ingradients__title {
   text-align: center;
   max-width: 411px;
@@ -1172,6 +1265,10 @@
   max-width: 486px;
   margin: 0 auto;
   padding-top: 37px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
 }
 
 .ingradients__list {
@@ -1197,7 +1294,11 @@
 }
 
 .ingradients__card:hover .ingradients__overlay {
-  transform: translateY(-254.5px);
+  transform: translateY(-224.5px);
+}
+
+.ingradients__item {
+  list-style: none;
 }
 
 .ingradients__overlay {
@@ -1280,6 +1381,10 @@
 .ingradients__card-text {
   color: #111;
   max-width: 214px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
 }
 
 .ingradients__card-milk, .ingradients__card-sweet-chocolate {
@@ -1296,6 +1401,15 @@
 
 .ingradients__card-name-nuts, .ingradients__card-name-chocolate {
   color: #fff;
+}
+
+.ingradients__button-list {
+  flex-flow: row;
+  justify-content: center;
+  max-width: 280px;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 40px;
 }
 
 @media (width <= 1024px) {
@@ -1331,14 +1445,12 @@
   }
 
   .ingradients__button-list {
+    flex-flow: row;
     justify-content: center;
     max-width: 280px;
     margin-right: auto;
-  }
-
-  .ingradients__button-list-sweet-chocolate {
-    flex-direction: column;
-    padding-left: 20px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -1357,7 +1469,8 @@
   }
 
   .ingradients__button-list {
-    flex-flow: wrap;
+    flex-wrap: wrap;
+    padding-left: 12px;
   }
 }
 
@@ -1379,15 +1492,14 @@
   }
 
   .ingradients__button-list {
-    flex-direction: row;
+    flex-flow: row;
+    padding-left: 0;
   }
-}
 
-.client__reviews, .about__text, .footer__contact-link, .gallery__text, .how-its-made__text, .info__text, .ingradients__text, .ingradients__card-text {
-  font-family: Montserrat;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
+  .ingradients__button-list-last {
+    justify-content: center;
+    display: flex;
+  }
 }
 
 .about {
@@ -1427,6 +1539,10 @@
 .about__text {
   color: #ffffffb3;
   max-width: 308px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
 }
 
 .about__title {
@@ -1477,13 +1593,6 @@
   }
 }
 
-.client__reviews, .footer__contact-link, .gallery__text, .how-its-made__text, .info__text, .ingradients__text, .ingradients__card-text, .about__text {
-  font-family: Montserrat;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-}
-
 .products__title {
   text-transform: uppercase;
   text-align: center;
@@ -1496,7 +1605,7 @@
   color: #fd9222;
 }
 
-.products__card-list {
+.products__cards {
   text-align: center;
   text-transform: uppercase;
   justify-content: center;
@@ -1608,6 +1717,10 @@
 html, body {
   max-width: none;
   overflow-x: hidden;
+}
+
+.reviews {
+  position: static;
 }
 
 .reviews__title {
@@ -1777,6 +1890,10 @@ html, body {
   opacity: .7;
   width: 300px;
   margin: 0;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
   line-height: 18px;
 }
 
@@ -1847,5 +1964,9 @@ html, body {
 
 a {
   text-decoration: none;
+}
+
+body {
+  background-color: #fafafa;
 }
 /*# sourceMappingURL=main.b2625c6b.css.map */

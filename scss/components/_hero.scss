@@ -1,6 +1,6 @@
-@import "../utils/mixins";
-@import "../utils/placeholder";
-@import "../utils/variables";
+@use "../utils/mixins" as *;
+
+@use "../utils/variables" as *;
 .hero{
     font-family: Montserrat;
     background-image: url(/img/backround-img.jpg);
@@ -76,6 +76,7 @@
         display: flex;
         align-items: center;
         gap: 15px;
+        list-style: none;
     }
     &__decorative-line{
         height: 119px;

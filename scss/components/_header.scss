@@ -1,5 +1,5 @@
-@import "../utils/placeholder";
-@import "../utils/variables";
+
+@use "../utils/variables" as *;
 
 .header{
     display: flex;
@@ -39,58 +39,141 @@
         fill: $decor-color;
     }
 }
-.hamburger-btn{
+.burger{
     display: none;
 }
+.open{
+    display: flex !important;
+}
+.nav{
+    display: none;
+}
+
 @media (max-width:1024px){
+    .header{
+        height: 47px;
+    }
     .header__list{
         display: none;
     }
     .header__svg-wrapper{
         display: none;
     }
-    .hamburger-btn{
-        display: block;
-    }  
-
-    .menu-overlay {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: $ui-color;
-    transform: translateX(-100%);
-    transition: transform 0.4s ease-in-out;
-    z-index: 100;
-    height: 796px; 
-}
-
-    .menu-overlay.active {
-        transform: translateX(0);
-
-    }
-    .hamburger-line {
-            width: 20px;
-            height: 2px;
-            background: $ui-color;
-            border-radius: 1px;
-            transition: all 0.3s ease;
-            background-color: $text-primary;
-    }
-    .hamburger-btn{
+    .burger{
+        display: flex;
         position: relative;
-        width: 40px;
-        height: 40px;
+        z-index: 50;
+        align-items: center;
+        justify-content: flex-end;
+        width: 30px;
+        height: 18px;
+        &__span{
+            height: 2px;
+            width: 100%;
+            transform: scale(1);
+            background-color: $text-primary;
+            &:hover{
+                background-color: $decor-color;
+            }
+        }
+        &::before{
+            content: "";
+            height: 2px;
+            width: 100%;
+            position: absolute;
+            background-color: $text-primary;
+            transition: all 0.3s ease 0s;
+            top: 0;
+                        &:hover{
+                background-color: $decor-color;
+            }
+        }
+        &::after{
+            content: "";
+            height: 2px;
+            width: 100%;
+            position: absolute;
+            background-color: $text-primary;
+            transition: all 0.3s ease 0s;
+            bottom: 0;
+            &:focus{
+                background-color: $decor-color;
+            }
+        }
+    }
+    .burger.active .burger__span{
+        transform: scale(0);
+    }
+    .burger.active::before{
+        top: 50%;
+        transform: rotate(-45deg) translate(0, -50%);
+    }
+    .burger.active::after{
+        top: 50%;
+        transform: rotate(45deg) translate(0, -50%);
+    }
+    .nav{
+        background-color: $bg-color;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        right: 0;
+        position: fixed;
+        z-index: 50;
+        overflow-y: auto;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        transform: translateX(100%);
+    }
+    .nav.active{
+        transition: all 1s;
+        transform: translateX(0);
+    }
+    .nav__wrapper{
+        display: flex;
         justify-content: center;
-        gap: 4px;
-        background-color: transparent;
-        border: none;
+        margin-top: 110px;
+    }
+    .nav__svg{
+        fill: $ui-color;
+        &:hover{
+            fill: $decor-color;
+        }
+    }
+    .nav__svg-wrapper{
+        display: flex;
+        position: absolute;
+        top: 95%;
+        left: 5%;
+        gap: 10px;
+    }
+    .nav__list{
+        display: flex;
+        flex-direction: column;
         padding: 0;
+        gap: 35px;
+    }
+    .nav__link{
+         color: $ui-color;
+        font-family: Montserrat;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        position: relative;
+        list-style: none;
+        &:hover{
+            color: $decor-color;
+        }
+        &:hover::after{
+            content: "";
+            width: 50%;
+            height: 1px;
+            position: absolute;
+            top: 20px;
+            right: 50%;
+            border: none;
+            background-color: $decor-color;
+        }
     }
 }
 .container{
@@ -104,6 +187,4 @@ html, body{
     overflow-x: hidden;
     max-width: none;
 }
-.menu-overlay{
-    display: none;
-}
+

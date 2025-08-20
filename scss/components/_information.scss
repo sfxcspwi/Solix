@@ -1,5 +1,5 @@
-@import "../utils/variables";
-@import "../utils/placeholder";
+@use "../utils/variables" as *;
+
 
 .info
 {
@@ -29,7 +29,10 @@
 
     &__text
     {
-        @extend %base-text;
+        font-family: "Montserrat";
+        font-weight: 400;
+        font-style: normal;
+        font-size: 14px; 
         line-height: 18px;
         letter-spacing: -2%;
         text-align: center;

@@ -1,8 +1,9 @@
-@import "../utils/variables";
-@import "../utils/placeholder";
+@use "../utils/variables" as *;
+
 
 .gallery
 {
+    position: static;
 
     &__title
     {
@@ -31,7 +32,10 @@
 
     &__text
     {
-        @extend %base-text;
+        font-family: "Montserrat";
+        font-weight: 400;
+        font-style: normal;
+        font-size: 14px; 
         color: $text-primary;
         line-height: 18px;
         letter-spacing: -2%;
@@ -416,10 +420,10 @@
 
         &__info
         {
-            height: 90px;
+            height: 600px;
             flex-wrap: wrap;
             gap: 25px;
-            
+   
         }
 
         &__btn

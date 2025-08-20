@@ -1,5 +1,5 @@
- @import "../utils/placeholder";
- @import "../utils/variables";
+
+ @use "../utils/variables" as *;
  .ingradients__title{
     text-align: center;
     margin: 0 auto;
@@ -11,7 +11,10 @@
 }
 .ingradients__text{
     padding-top: 37px;
-    @extend %base-text;
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px; 
     text-align: center;
     margin: 0 auto;
     max-width: 486px;
@@ -35,8 +38,11 @@
     flex-direction: column;
     align-items: center;
     &:hover .ingradients__overlay{
-        transform: translateY(-254.5px);
+        transform: translateY(-224.5px);
     }
+}
+.ingradients__item{
+    list-style: none;
 }
 .ingradients__overlay{
     transform: translateY(50px);
@@ -114,7 +120,10 @@
     height: 24px;
 }
 .ingradients__card-text{
-    @extend %base-text;
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px; 
     color: $text-primary;
     max-width: 214px;
 }
@@ -130,6 +139,16 @@
 .ingradients__card-name-nuts, .ingradients__card-name-chocolate{
     color: $ui-color;
 }
+    .ingradients__button-list{
+        max-width: 280px;
+        justify-content: center;
+        margin-right: auto;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding-left: 0;
+        padding-right: 40px;
+        margin-right: 0;
+    }
 @media (max-width:1024px){
 .ingradients__list{
         display: grid;
@@ -160,10 +179,11 @@
         max-width: 280px;
         justify-content: center;
         margin-right: auto;
-    }
-    .ingradients__button-list-sweet-chocolate{
-        padding-left: 20px;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding-left: 0;
+        padding-right: 0;
+        margin-right: auto;
     }
 }
 @media (max-width:768px){
@@ -178,8 +198,8 @@
         max-width: 280px;
     }
     .ingradients__button-list{
-        flex-direction: row;
         flex-wrap: wrap;
+        padding-left: 12px;
     }
 }
 @media (max-width:550px){
@@ -198,6 +218,12 @@
     }
     .ingradients__button-list{
         flex-direction: row;
+        flex-wrap: nowrap;
+        padding-left: 0;
+    }
+    .ingradients__button-list-last{
+        display: flex;
+        justify-content: center;
     }
 }
 .container{
