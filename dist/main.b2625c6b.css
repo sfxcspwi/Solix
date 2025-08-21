@@ -631,6 +631,10 @@
   fill: #fd9222;
 }
 
+.header__chocolate-svg {
+  fill: #fff;
+}
+
 .burger {
   display: none;
 }
@@ -669,10 +673,6 @@
     transform: scale(1);
   }
 
-  .burger__span:hover {
-    background-color: #fd9222;
-  }
-
   .burger:before {
     content: "";
     background-color: #111;
@@ -681,10 +681,6 @@
     transition: all .3s;
     position: absolute;
     top: 0;
-  }
-
-  .burger:before:hover {
-    background-color: #fd9222;
   }
 
   .burger:after {
@@ -697,20 +693,18 @@
     bottom: 0;
   }
 
-  .burger:after:focus {
-    background-color: #fd9222;
-  }
-
   .burger.active .burger__span {
     transform: scale(0);
   }
 
   .burger.active:before {
+    background-color: #fff;
     top: 50%;
     transform: rotate(-45deg)translate(0, -50%);
   }
 
   .burger.active:after {
+    background-color: #fff;
     top: 50%;
     transform: rotate(45deg)translate(0, -50%);
   }
@@ -1343,7 +1337,10 @@
 
 .ingradients__button-list {
   gap: 6px;
+  justify-content: unset;
+  flex-wrap: wrap;
   width: 214px;
+  padding: 0;
   display: flex;
 }
 
@@ -1403,15 +1400,6 @@
   color: #fff;
 }
 
-.ingradients__button-list {
-  flex-flow: row;
-  justify-content: center;
-  max-width: 280px;
-  margin-right: 0;
-  padding-left: 0;
-  padding-right: 40px;
-}
-
 @media (width <= 1024px) {
   .ingradients__list {
     justify-content: unset;
@@ -1446,10 +1434,10 @@
 
   .ingradients__button-list {
     flex-flow: row;
-    justify-content: center;
+    justify-content: start;
     max-width: 280px;
     margin-right: auto;
-    padding-left: 0;
+    padding-left: 20px;
     padding-right: 0;
   }
 }
@@ -1467,15 +1455,10 @@
   .ingradients__card-text {
     max-width: 280px;
   }
-
-  .ingradients__button-list {
-    flex-wrap: wrap;
-    padding-left: 12px;
-  }
 }
 
 @media (width <= 550px) {
-  .ingradients__button-list {
+  .ingradients__button-list-last {
     flex-direction: column;
   }
 }
@@ -1493,12 +1476,6 @@
 
   .ingradients__button-list {
     flex-flow: row;
-    padding-left: 0;
-  }
-
-  .ingradients__button-list-last {
-    justify-content: center;
-    display: flex;
   }
 }
 

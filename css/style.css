@@ -582,6 +582,10 @@
   fill: #FD9222;
 }
 
+.header__chocolate-svg {
+  fill: white;
+}
+
 .burger {
   display: none;
 }
@@ -619,9 +623,6 @@
     transform: scale(1);
     background-color: #111111;
   }
-  .burger__span:hover {
-    background-color: #FD9222;
-  }
   .burger::before {
     content: "";
     height: 2px;
@@ -630,9 +631,6 @@
     background-color: #111111;
     transition: all 0.3s ease 0s;
     top: 0;
-  }
-  .burger::before:hover {
-    background-color: #FD9222;
   }
   .burger::after {
     content: "";
@@ -643,19 +641,18 @@
     transition: all 0.3s ease 0s;
     bottom: 0;
   }
-  .burger::after:focus {
-    background-color: #FD9222;
-  }
   .burger.active .burger__span {
     transform: scale(0);
   }
   .burger.active::before {
     top: 50%;
     transform: rotate(-45deg) translate(0, -50%);
+    background-color: #FFFFFF;
   }
   .burger.active::after {
     top: 50%;
     transform: rotate(45deg) translate(0, -50%);
+    background-color: #FFFFFF;
   }
   .nav {
     background-color: #1E1823;
@@ -1307,6 +1304,10 @@ html, body {
   display: flex;
   gap: 6px;
   width: 214px;
+  flex-wrap: wrap;
+  padding: 0;
+  justify-content: unset;
+  padding-right: 0;
 }
 
 .ingradients__button-name {
@@ -1365,17 +1366,6 @@ html, body {
   color: #FFFFFF;
 }
 
-.ingradients__button-list {
-  max-width: 280px;
-  justify-content: center;
-  margin-right: auto;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  padding-left: 0;
-  padding-right: 40px;
-  margin-right: 0;
-}
-
 @media (max-width: 1024px) {
   .ingradients__list {
     display: grid;
@@ -1404,13 +1394,12 @@ html, body {
   }
   .ingradients__button-list {
     max-width: 280px;
-    justify-content: center;
+    justify-content: start;
     margin-right: auto;
     flex-direction: row;
     flex-wrap: nowrap;
-    padding-left: 0;
+    padding-left: 20px;
     padding-right: 0;
-    margin-right: auto;
   }
 }
 @media (max-width: 768px) {
@@ -1424,13 +1413,9 @@ html, body {
   .ingradients__card-text {
     max-width: 280px;
   }
-  .ingradients__button-list {
-    flex-wrap: wrap;
-    padding-left: 12px;
-  }
 }
 @media (max-width: 550px) {
-  .ingradients__button-list {
+  .ingradients__button-list-last {
     flex-direction: column;
   }
 }
@@ -1446,11 +1431,6 @@ html, body {
   .ingradients__button-list {
     flex-direction: row;
     flex-wrap: nowrap;
-    padding-left: 0;
-  }
-  .ingradients__button-list-last {
-    display: flex;
-    justify-content: center;
   }
 }
 .container {

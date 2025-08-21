@@ -39,6 +39,9 @@
         fill: $decor-color;
     }
 }
+.header__chocolate-svg{
+    fill: white;
+}
 .burger{
     display: none;
 }
@@ -72,9 +75,6 @@
             width: 100%;
             transform: scale(1);
             background-color: $text-primary;
-            &:hover{
-                background-color: $decor-color;
-            }
         }
         &::before{
             content: "";
@@ -84,9 +84,6 @@
             background-color: $text-primary;
             transition: all 0.3s ease 0s;
             top: 0;
-                        &:hover{
-                background-color: $decor-color;
-            }
         }
         &::after{
             content: "";
@@ -96,9 +93,6 @@
             background-color: $text-primary;
             transition: all 0.3s ease 0s;
             bottom: 0;
-            &:focus{
-                background-color: $decor-color;
-            }
         }
     }
     .burger.active .burger__span{
@@ -107,10 +101,12 @@
     .burger.active::before{
         top: 50%;
         transform: rotate(-45deg) translate(0, -50%);
+        background-color: $ui-color;
     }
     .burger.active::after{
         top: 50%;
         transform: rotate(45deg) translate(0, -50%);
+        background-color: $ui-color;
     }
     .nav{
         background-color: $bg-color;

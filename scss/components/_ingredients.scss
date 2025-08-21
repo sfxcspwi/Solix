@@ -89,6 +89,10 @@
     display: flex;
     gap: 6px;
     width: 214px;
+    flex-wrap: wrap;
+    padding: 0;
+    justify-content: unset;
+    padding-right: 0;
 }
 .ingradients__button-name{
     width: 81px;
@@ -139,18 +143,9 @@
 .ingradients__card-name-nuts, .ingradients__card-name-chocolate{
     color: $ui-color;
 }
-    .ingradients__button-list{
-        max-width: 280px;
-        justify-content: center;
-        margin-right: auto;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        padding-left: 0;
-        padding-right: 40px;
-        margin-right: 0;
-    }
+
 @media (max-width:1024px){
-.ingradients__list{
+    .ingradients__list{
         display: grid;
         grid-template-columns: auto auto auto;
         justify-content: unset;
@@ -177,13 +172,12 @@
     }
     .ingradients__button-list{
         max-width: 280px;
-        justify-content: center;
+        justify-content: start;
         margin-right: auto;
         flex-direction: row;
         flex-wrap: nowrap;
-        padding-left: 0;
+        padding-left: 20px;
         padding-right: 0;
-        margin-right: auto;
     }
 }
 @media (max-width:768px){
@@ -197,13 +191,10 @@
     .ingradients__card-text {
         max-width: 280px;
     }
-    .ingradients__button-list{
-        flex-wrap: wrap;
-        padding-left: 12px;
-    }
+
 }
 @media (max-width:550px){
-    .ingradients__button-list{
+    .ingradients__button-list-last{
         flex-direction: column;
     }
 }
@@ -219,11 +210,6 @@
     .ingradients__button-list{
         flex-direction: row;
         flex-wrap: nowrap;
-        padding-left: 0;
-    }
-    .ingradients__button-list-last{
-        display: flex;
-        justify-content: center;
     }
 }
 .container{
